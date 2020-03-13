@@ -1,0 +1,3131 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Trelliscope</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      vertical-align: baseline;
+      outline: none;
+      /* width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 50% auto; */
+    }
+
+    /* .dummy {
+      background: lightcoral;
+    } */
+    .trelliscope-dev-full {
+      width: 100vw !important;
+      height: 100vh !important;
+      /* display: block; */
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- <div class="dummy"></div> -->
+  <div class="trelliscope-dev-full" id="root"></div>
+  <script>
+    setTimeout(function () {
+      trelliscope('root', {
+        "config": {
+          "display_base": "",
+          "data_type": "jsonp",
+          "cog_server": {
+            "type": "jsonp",
+            "info": {
+              "base": "displays"
+            }
+          },
+          "header": {
+            "enabled": true,
+            "pagination": true,
+            "backgroundColor": "#fff",
+            "color": "#000000"
+          },
+          "footer": {
+            "enabled": true,
+            "color": "#777777",
+            "fontSize": 11,
+            "backgroundColor": "#e6e6e6"
+          },
+          "labels": {
+            "enabled": true,
+            "position": "bottom",
+            "backgroundColor": "#e6e6e6",
+            "color": "#777777"
+          },
+          "sidebar": {
+            "enabled": true,
+            "gridEnabled": true,
+            "labelsEnabled": true,
+            "filterEnabled": true,
+            "sortEnabled": true
+          },
+          "panelOptions": {
+            "backgroundColor": "#f3f3f3",
+            "borderSize": 0,
+            "borderColor": "#ffffff"
+          },
+          "panelTitle": {
+            "position": "top",
+            "backgroundColor": "transparent",
+            "color": "#000000",
+            "fontSize": 14,
+            "fontFamily": "Verdana",
+            "textAlignment": "center",
+            "enabled": true
+          },
+          "alternateBackground": {
+            "enabled": false,
+            "type": "column",
+            "backgroundColor": "#efefef"
+          },
+          "customAPI": "{}",
+          "panelFilter": {
+            "enabled": false,
+            "type": "topNbottom",
+            "size": 3,
+            "measureName": "Pack"
+          }
+        },
+        "displayList": {
+          "n": 12,
+          "name": " ",
+          "fontFamily": "\"Segoe UI\", wf_segoe-ui_normal, helvetica, arial, sans-serif",
+          "height": 500,
+          "width": 500,
+          "group": "common",
+          "state": {
+            "labels": ["Pack"],
+            "sort": [],
+            "layout": {
+              "nrow": 3,
+              "ncol": 3,
+              "arrange": "row"
+            },
+            "sidebar": false,
+            "displayName": " "
+          },
+          "cogInfo": {
+            "Month": {
+              "name": "Month",
+              "desc": "Month",
+              "type": "factor",
+              "group": "common",
+              "defLabel": true,
+              "defActive": true,
+              "filterable": true,
+              "log": null,
+              "levels": ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+                "October", "November", "December"
+              ]
+            },
+            "Pack": {
+              "name": "Pack",
+              "desc": "Pack",
+              "type": "numeric",
+              "group": "common",
+              "nnna": 12,
+              "range": [7784, 9631],
+              "breaks": [0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000,
+                7500, 8000, 8500, 9000, 9500, 9631
+              ],
+              "delta": 500,
+              "defLabel": true,
+              "defActive": true,
+              "filterable": true,
+              "log": null
+            }
+          },
+          "cogDistns": {
+            "Month": {
+              "dist": {}
+            },
+            "Pack": {
+              "dist": {
+                "raw": {
+                  "breaks": [],
+                  "freq": []
+                }
+              }
+            }
+          },
+          "cogInterface": {
+            "name": " ",
+            "group": "common",
+            "type": "JSON"
+          },
+          "panelInterface": {
+            "type": "chart",
+            "xAxis": [2012, 2013, 2014, 2015],
+            "yAxis": ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+              "October", "November", "December"
+            ],
+            "data": [{
+              "data": [{
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 4
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 0
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":4}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":0}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 7251,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 7251,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 4
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 1
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":4}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":1}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8688,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8688,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 4
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 2
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":4}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":2}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 7590,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 7590,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 4
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 3
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":4}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":3}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 7784,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 7784,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }]
+            }, {
+              "data": [{
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 5
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 0
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":5}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":0}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 7694,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 7694,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 5
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 1
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":5}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":1}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 7292,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 7292,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 5
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 2
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":5}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":2}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 6929,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 6929,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 5
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 3
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":5}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":3}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8151,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8151,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }]
+            }, {
+              "data": [{
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 6
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 0
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":6}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":0}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8006,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8006,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 6
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 1
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":6}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":1}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 7322,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 7322,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 6
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 2
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":6}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":2}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8430,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8430,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 6
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 3
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":6}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":3}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8760,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8760,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }]
+            }, {
+              "data": [{
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 7
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 0
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":7}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":0}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 7571,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 7571,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 7
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 1
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":7}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":1}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8583,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8583,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 7
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 2
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":7}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":2}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8470,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8470,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 7
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 3
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":7}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":3}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8376,
+                "color": {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                },
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8376,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }]
+            }, {
+              "data": [{
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 8
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 0
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":8}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":0}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 9974,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 9974,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 8
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 1
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":8}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":1}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8450,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8450,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 8
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 2
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":8}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":2}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8337,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8337,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 8
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 3
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":8}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":3}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8568,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8568,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }]
+            }, {
+              "data": [{
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 9
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 0
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":9}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":0}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8364,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8364,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 9
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 1
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":9}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":1}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8186,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8186,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 9
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 2
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":9}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":2}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8979,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8979,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 9
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 3
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":9}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":3}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 9631,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 9631,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }]
+            }, {
+              "data": [{
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 10
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 0
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":10}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":0}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8586,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8586,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 10
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 1
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":10}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":1}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 9842,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 9842,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 10
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 2
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":10}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":2}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 9439,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 9439,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 10
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 3
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":10}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":3}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 9115,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 9115,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }]
+            }, {
+              "data": [{
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 11
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 0
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":11}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":0}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 9620,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 9620,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 11
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 1
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":11}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":1}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8150,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8150,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 11
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 2
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":11}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":2}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8712,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8712,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 11
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 3
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":11}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":3}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8725,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8725,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }]
+            }, {
+              "data": [{
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 12
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 0
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":12}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":0}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 7185,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 7185,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 12
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 1
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":12}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":1}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8644,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8644,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 12
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 2
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":12}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":2}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8289,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8289,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 12
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 3
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":12}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":3}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 9128,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 9128,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }]
+            }, {
+              "data": [{
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 13
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 0
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":13}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":0}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 9358,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 9358,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 13
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 1
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":13}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":1}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 9653,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 9653,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 13
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 2
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":13}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":2}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 9831,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 9831,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 13
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 3
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":13}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":3}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8961,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8961,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }]
+            }, {
+              "data": [{
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 14
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 0
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":14}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":0}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 8125,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 8125,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 14
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 1
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":14}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":1}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 7993,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 7993,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 14
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 2
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":14}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":2}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 7650,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 7650,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 14
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 3
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":14}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":3}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 9615,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 9615,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }]
+            }, {
+              "data": [{
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 15
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 0
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":15}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":0}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 9978,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 9978,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 15
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 1
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":15}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":1}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 10352,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 10352,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 15
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 2
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":15}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":2}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": 11211,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": 11211,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }, {
+                "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                "name": "Pack",
+                "className": "",
+                "selectionId": {
+                  "measures": [],
+                  "dataMap": {
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Month": [{
+                      "identityIndex": 15
+                    }],
+                    "1 - Iowa_Liquor_Sales_Sample_Se.Year": [{
+                      "identityIndex": 3
+                    }]
+                  },
+                  "key": "{\"1 - Iowa_Liquor_Sales_Sample_Se.Month\":[{\"identityIndex\":15}],\"1 - Iowa_Liquor_Sales_Sample_Se.Year\":[{\"identityIndex\":3}]}[]"
+                },
+                "TypeColor": [{
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#118DFF",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#12239E",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#E66C37",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }, {
+                  "id": "Sum(1 - Iowa_Liquor_Sales_Sample_Se.Pack)",
+                  "actualType": "line",
+                  "seriesColorData": "#6B007B",
+                  "fillOpacity": 1,
+                  "strokeWidth": 1,
+                  "dashStyle": "solid"
+                }],
+                "data": null,
+                "tooltipPoints": [{
+                  "name": "Pack",
+                  "value": null,
+                  "isDimensionValue": false,
+                  "autoScalingFactor": "K",
+                  "isInteger": true
+                }],
+                "events": {}
+              }]
+            }]
+          },
+          "chartEvents": {},
+          "defaultChartConfig": {
+            "boost": {
+              "useGPUTranslations": true
+            },
+            "series": [],
+            "chart": {
+              "animation": false,
+              "renderTo": {
+                "hcOrigDetached": false,
+                "hcEvents": {
+                  "keydown": [{
+                    "order": null
+                  }]
+                }
+              },
+              "backgroundColor": "transparent",
+              "events": {}
+            },
+            "title": {
+              "text": ""
+            },
+            "subtitle": {
+              "text": ""
+            },
+            "exporting": {
+              "enabled": false
+            },
+            "credits": {
+              "enabled": false
+            },
+            "plotOptions": {
+              "series": {
+                "allowPointSelect": true,
+                "animation": false,
+                "borderWidth": 0,
+                "connectNulls": true,
+                "dataLabels": {
+                  "allowOverlap": false,
+                  "crop": false,
+                  "inside": false,
+                  "enabled": false,
+                  "borderRadius": 5,
+                  "backgroundColor": "rgba(230,230,230,1)",
+                  "rotation": 0,
+                  "style": {
+                    "fontFamily": "\"Segoe UI\", wf_segoe-ui_normal, helvetica, arial, sans-serif",
+                    "fontSize": 11,
+                    "color": "#777777",
+                    "fontWeight": "normal"
+                  }
+                },
+                "point": {
+                  "events": {}
+                },
+                "states": {
+                  "inactive": {
+                    "opacity": 1
+                  },
+                  "hover": {
+                    "enabled": false,
+                    "halo": {
+                      "opacity": 1
+                    }
+                  }
+                },
+                "marker": {
+                  "enabled": false
+                }
+              }
+            },
+            "tooltip": {
+              "useHTML": false,
+              "enabled": true
+            },
+            "legend": {
+              "enabled": false
+            },
+            "xAxis": {
+              "crosshair": true,
+              "lineColor": "#ccd6eb",
+              "lineWidth": 1,
+              "labels": {
+                "autoRotation": [-90],
+                "rotation": 0,
+                "enabled": true,
+                "step": 1,
+                "style": {
+                  "color": "#000000",
+                  "fontSize": "11px",
+                  "fontFamily": "\"Segoe UI\", wf_segoe-ui_normal, helvetica, arial, sans-serif"
+                }
+              },
+              "title": {
+                "text": ""
+              },
+              "visible": true,
+              "categories": [2012, 2013, 2014, 2015]
+            },
+            "yAxis": {
+              "gridLineColor": "#e6e6e6",
+              "gridLineDashStyle": "solid",
+              "gridLineWidth": 1,
+              "lineColor": "#777777",
+              "lineWidth": 0,
+              "maxPadding": 0,
+              "endOnTick": false,
+              "labels": {
+                "rotation": 0,
+                "enabled": false,
+                "step": 1,
+                "style": {
+                  "color": "14",
+                  "fontSize": "11px",
+                  "fontFamily": "\"Segoe UI\", wf_segoe-ui_normal, helvetica, arial, sans-serif"
+                }
+              },
+              "title": {
+                "text": ""
+              },
+              "type": "linear",
+              "reversedStacks": false,
+              "visible": true,
+              "min": 6900,
+              "max": 10000
+            }
+          }
+        },
+        "cogData": [{
+          "name": "January",
+          "Month": "January",
+          "Pack": "31.31K",
+          "PackValue": 31313,
+          "__index": 0
+        }, {
+          "name": "February",
+          "Month": "February",
+          "Pack": "30.07K",
+          "PackValue": 30066,
+          "__index": 1
+        }, {
+          "name": "March",
+          "Month": "March",
+          "Pack": "32.52K",
+          "PackValue": 32518,
+          "__index": 2
+        }, {
+          "name": "April",
+          "Month": "April",
+          "Pack": "33.00K",
+          "PackValue": 33000,
+          "__index": 3
+        }, {
+          "name": "May",
+          "Month": "May",
+          "Pack": "35.33K",
+          "PackValue": 35329,
+          "__index": 4
+        }, {
+          "name": "June",
+          "Month": "June",
+          "Pack": "35.16K",
+          "PackValue": 35160,
+          "__index": 5
+        }, {
+          "name": "July",
+          "Month": "July",
+          "Pack": "36.98K",
+          "PackValue": 36982,
+          "__index": 6
+        }, {
+          "name": "August",
+          "Month": "August",
+          "Pack": "35.21K",
+          "PackValue": 35207,
+          "__index": 7
+        }, {
+          "name": "September",
+          "Month": "September",
+          "Pack": "33.25K",
+          "PackValue": 33246,
+          "__index": 8
+        }, {
+          "name": "October",
+          "Month": "October",
+          "Pack": "37.80K",
+          "PackValue": 37803,
+          "__index": 9
+        }, {
+          "name": "November",
+          "Month": "November",
+          "Pack": "33.38K",
+          "PackValue": 33383,
+          "__index": 10
+        }, {
+          "name": "December",
+          "Month": "December",
+          "Pack": "31.54K",
+          "PackValue": 31541,
+          "__index": 11
+        }]
+      }, {
+        logger: false
+      });
+    }, 1000)
+
+  </script>
+
+</body>
+
+</html>

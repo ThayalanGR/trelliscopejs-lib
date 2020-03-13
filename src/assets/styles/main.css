@@ -1,0 +1,70 @@
+.trelliscope-app {
+  width: 100%;
+  height: 100%;
+  background: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: normal;
+  position: relative;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.trelliscope-app button {
+  font-family: "Open Sans",
+    sans-serif;
+  font-weight: 300;
+}
+
+.trelliscope-app td,
+.trelliscope-app th {
+  box-sizing: content-box;
+}
+
+.trelliscope-app label {
+  font-weight: 300;
+}
+
+.trelliscope-app table {
+  font-weight: 300;
+}
+
+.trelliscope-app button:focus {
+  outline: 0;
+}
+
+.trelliscope-app h1,
+.trelliscope-app h2,
+.trelliscope-app h3,
+.trelliscope-app h4,
+.trelliscope-app h5,
+.trelliscope-app h6 {
+  font-weight: 400;
+  color: black;
+}
+
+.trelliscope-app strong {
+  color: black;
+  font-weight: 400;
+}
+
+.trelliscope-app th {
+  font-weight: 400;
+}
+
+.trelliscope-app h1 {
+  font-size: 24px;
+}
+
+.trelliscope-app h2 {
+  font-size: 20px;
+}
+
+.trelliscope-app a {
+  color: #FF5252
+}
+
+.enLargeIcon:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
