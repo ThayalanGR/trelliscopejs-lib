@@ -354,14 +354,19 @@ const setPanelInfo = (dObjJson, cfg, dispatch) => {
 
       let element;
 
+      console.log("xxxxxx", x)
+
       const result = groupBy(x.data[key].data, (item) => item.name);
+      console.log('result', result)
 
       const keys = Object.keys(result);
+      console.log(keys)
       let type = '';
 
       keys.map((item, inx) => {
 
         const typedata = result[item].map(itm => itm.TypeColor);
+        console.log("typedata", typedata)
         let y = typedata[0][inx];
         type = getSeriesType(y.actualType);
 
@@ -377,8 +382,8 @@ const setPanelInfo = (dObjJson, cfg, dispatch) => {
           else dataForm['y'] = itm.data;
 
           return dataForm;
-
         });
+        console.log(data, "dataform data")
 
 
         if (result[item][0].id === y.id) {
@@ -396,6 +401,7 @@ const setPanelInfo = (dObjJson, cfg, dispatch) => {
             obj["dashStyle"] = y.dashStyle;
           }
 
+          console.log("obj...", obj)
 
           seriesArray.push(obj);
         }
